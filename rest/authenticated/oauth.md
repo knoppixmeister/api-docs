@@ -12,7 +12,7 @@ Here is a sample request using ```echo```, ```openssl``` and ```curl```.
 | :--- | :--- |
 | API Key | 6591f7c2491db0a23a1d8ad6911c825e |
 | API Secret | 8c08d9d5c3d15b105dbddaf96e427ac6 |
-| memo | mymemo |
+| memo | mymemo (memo is the alias that user gave this API) |
 
 ```sh
 echo -n "6591f7c2491db0a23a1d8ad6911c825e:8c08d9d5c3d15b105dbddaf96e427ac6:mymemo" | openssl dgst -sha256 -hmac "8c08d9d5c3d15b105dbddaf96e427ac6"
