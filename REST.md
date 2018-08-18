@@ -47,7 +47,7 @@ The client can request an access token using API key and a signed message. The c
 
 * grant_type: REQUIRED. Value MUST be set to "client_credentials"
 * client_id: API key
-* client_secret: API Secret
+* client_secret: HMAC-SHA256 signed request parameter map
 
 Please check the section for sample request [Get Bearer Token](rest/authenticated/oauth.md).
 
