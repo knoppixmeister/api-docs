@@ -50,6 +50,11 @@ print(response.text)
 | offset | query | Current page, which starts from 0 |
 | limit | query | Maximum size of the results in one page, less than 100 |
 
+#### Polling
+
+```offset``` and ```limit``` are optional. If they are not passed in, the result contains all orders that satisfy ```symbol``` and ```status``` restrictions.
+
+However, for high-volume trading it is strongly recommended that you maintain your own list of open orders and use one of the streaming market data feeds to keep it updated. You should poll the open orders endpoint once when you start trading to obtain the current state of any open orders.
 
 #### Status Type
 | Status | Description |
