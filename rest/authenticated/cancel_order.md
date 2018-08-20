@@ -2,6 +2,21 @@
 
 Cancel a specific order.
 
+### HMAC SHA256 signature
+
+HMAC SHA256 signature will be used as the value of _**X-BM-SIGNATURE**_ header. We highly recommend to sign the payload in case the request body is hacked.
+
+Here is a sample request using ```echo```, ```openssl``` and ```curl```.
+
+| Key | Value |
+| :--- | :--- |
+| entrust_id | 1223181 |
+
+```sh
+echo -n "entrust_id=1223181" | openssl dgst -sha256 -hmac "8c08d9d5c3d15b105dbddaf96e427ac6"
+(stdin)= de4ed768cea4eb2f0fe081009eab1f41c5fd6ff6ed53768df7fe252472c257b3
+```
+
 ### Sample Request \(Python\)
 
 ```py
@@ -10,7 +25,7 @@ import requests
 url = "https://openapi.bitmart.com/v2/orders/1223181"
 
 // timestamp is in milliseconds and the authorization header is "Bearer " + token
-headers = {"X-BM-TIMESTAMP": xxx, "X-BM-AUTHORIZATION": "xxx"}
+headers = {"X-BM-TIMESTAMP": xxx, "X-BM-AUTHORIZATION": "xxx", "X-BM-SIGNATURE": "de4ed768cea4eb2f0fe081009eab1f41c5fd6ff6ed53768df7fe252472c257b3"}
 
 response = requests.delete(url, headers=headers)
 
