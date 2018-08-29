@@ -16,7 +16,7 @@ Here is a sample request using ```echo```, ```openssl``` and ```curl```.
 | price | 1 |
 
 ```sh
-echo -n "amount=1&price=1&symbol=BMX_ETH&side=buy" | openssl dgst -sha256 -hmac "8c08d9d5c3d15b105dbddaf96e427ac6"
+echo -n "amount=1&price=1&side=buy&symbol=BMX_ETH" | openssl dgst -sha256 -hmac "8c08d9d5c3d15b105dbddaf96e427ac6"
 (stdin)= df658d1d61537a842dba5ddb3f69a96f04a87ba4a9b3fba478cece39cb5da57f
 ```
 
