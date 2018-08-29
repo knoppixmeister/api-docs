@@ -104,7 +104,7 @@ A successful response is indicated by HTTP status code 200 and may contain an op
 ### Products
 
 * GET [Symbols](rest/public/symbols.md)
-* GET [Symbol Details](rest/public/symbol_details.md)
+* GET [Symbols Details](rest/public/symbols_details.md)
 * GET [Ticker](rest/public/ticker.md)
 * GET [K-line](rest/public/kline.md)
 * GET [Order Book](rest/public/order_book.md)

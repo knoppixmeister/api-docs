@@ -1,13 +1,13 @@
-# Symbol Details
+# Symbols Details
 
-Get the symbol detail.
+Get the details of all symbols.
 
 ### Sample Request \(Python\)
 
 ```py
 import requests
 
-url = "https://openapi.bitmart.com/v2/symbols/BMX_ETH"
+url = "https://openapi.bitmart.com/v2/symbols_details"
 
 response = requests.request("GET", url)
 
@@ -17,28 +17,27 @@ print(response.text)
 ### Sample Response
 
 ```js
-{
-   "base_currency":"BMX",
-   "quote_currency":"ETH",
-   "quote_increment":"0.00000001"
-   "base_min_size":"0.01"
-   "base_max_size":"100000000",
-   "price_min_precision":6,
-   "price_max_precision":8,
-   "expiration":"NA"
-}
+[
+    {
+        "id":"BMX_ETH",
+        "base_currency":"BMX",
+        "quote_currency":"ETH",
+        "quote_increment":"0.00000001",
+        "base_min_size":"0.01",
+        "base_max_size":"100000000",
+        "price_min_precision":6,
+        "price_max_precision":8,
+        "expiration":"NA"
+    },
+    ...
+]
 ```
-
-#### Request Parameter
-
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| symbol | path | Trading pair symbol |
 
 #### Response Details
 
 | Key | Type | Description |
 | :--- | :--- | :--- |
+| id | string | Trading pair id |
 | base\_currency | string | Base currency |
 | quote\_currency | string | Quote currency |
 | quote\_increment | string | Minimum order price as well as the price increment |
