@@ -17,7 +17,7 @@ Here is a sample request using ```echo```, ```openssl``` and ```curl```.
 
 ```sh
 echo -n "amount=1&price=1&side=buy&symbol=BMX_ETH" | openssl dgst -sha256 -hmac "8c08d9d5c3d15b105dbddaf96e427ac6"
-(stdin)= df658d1d61537a842dba5ddb3f69a96f04a87ba4a9b3fba478cece39cb5da57f
+(stdin)= 2302088e474141fc7b498d0fa96c9cc2eda39a5a24fd1495d469d0a72e5fd483
 ```
 
 ### Sample Request \(Python\)
