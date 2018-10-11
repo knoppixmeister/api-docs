@@ -10,7 +10,7 @@ import requests
 url = "https://openapi.bitmart.com/v2/wallet"
 
 // timestamp is in milliseconds and the authorization header is "Bearer " + token
-headers = {"X-BM-TIMESTAMP": xxx, "X-BM-AUTHORIZATION": "xxx"}
+headers = {"X-BM-TIMESTAMP": xxx, "X-BM-AUTHORIZATION": "Bearer xxxx-here-is-the-access-token"}
 
 response = requests.get(url, headers=headers)
 
