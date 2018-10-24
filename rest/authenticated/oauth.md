@@ -6,7 +6,7 @@ Get bearer token issued by the authorization server.
 
 HMAC SHA256 signature will be used as the value of _**client_secret**_ header.
 
-Here is a sample request using ```echo```, ```openssl``` and ```curl```.
+Here is a step-by-step example of how to generate _**client_secret**_ from the Linux command line using ```echo```, ```openssl``` and ```curl```.
 
 | Key | Value |
 | :--- | :--- |
@@ -15,7 +15,7 @@ Here is a sample request using ```echo```, ```openssl``` and ```curl```.
 | memo | mymemo (memo is the alias that user gave this API) |
 
 ```sh
-echo -n "6591f7c2491db0a23a1d8ad6911c825e:8c08d9d5c3d15b105dbddaf96e427ac6:mymemo" | openssl dgst -sha256 -hmac "8c08d9d5c3d15b105dbddaf96e427ac6"
+[linux]$ echo -n "6591f7c2491db0a23a1d8ad6911c825e:8c08d9d5c3d15b105dbddaf96e427ac6:mymemo" | openssl dgst -sha256 -hmac "8c08d9d5c3d15b105dbddaf96e427ac6"
 (stdin)= 18b9beb027d9ee75202655f37344ea5829c5c0d66a0781bf642bb3e944cf5019
 ```
 
