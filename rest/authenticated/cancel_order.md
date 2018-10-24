@@ -6,14 +6,14 @@ Cancel a specific order.
 
 HMAC SHA256 signature will be used as the value of _**X-BM-SIGNATURE**_ header. We highly recommend to sign the payload in case the request body is hacked.
 
-Here is a sample request using ```echo```, ```openssl``` and ```curl```.
+Here is a sample request from the Linux comman line using ```echo```, ```openssl``` and ```curl```.
 
 | Key | Value |
 | :--- | :--- |
 | entrust_id | 1223181 |
 
 ```sh
-echo -n "entrust_id=1223181" | openssl dgst -sha256 -hmac "8c08d9d5c3d15b105dbddaf96e427ac6"
+[linux]$ echo -n "entrust_id=1223181" | openssl dgst -sha256 -hmac "8c08d9d5c3d15b105dbddaf96e427ac6"
 (stdin)= de4ed768cea4eb2f0fe081009eab1f41c5fd6ff6ed53768df7fe252472c257b3
 ```
 
