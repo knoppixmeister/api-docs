@@ -25,6 +25,7 @@ import requests
 url = "https://openapi.bitmart.com/v2/orders/1223181"
 
 // timestamp is in milliseconds and the authorization header is "Bearer " + token
+// X-BM-SIGNATURE is the HMAC SHA256 signature of the request parameters encrypted by API Secret
 headers = {"X-BM-TIMESTAMP": xxx, "X-BM-AUTHORIZATION": "xxx", "X-BM-SIGNATURE": "de4ed768cea4eb2f0fe081009eab1f41c5fd6ff6ed53768df7fe252472c257b3"}
 
 response = requests.delete(url, headers=headers)
