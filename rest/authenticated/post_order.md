@@ -28,6 +28,7 @@ import requests
 url = "https://openapi.bitmart.com/v2/orders"
 
 // timestamp is in milliseconds and the authorization header is "Bearer " + token
+// X-BM-SIGNATURE is the HMAC SHA256 signature of the request parameters encrypted by API Secret
 headers = {"X-BM-TIMESTAMP": xxx, "X-BM-AUTHORIZATION": "xxx", "X-BM-SIGNATURE": "df658d1d61537a842dba5ddb3f69a96f04a87ba4a9b3fba478cece39cb5da57f", "Content-Type": "application/json"}
 
 data = {"symbol": "BMX_ETH","amount": 1,"price" : 1,"side" : "buy"}
