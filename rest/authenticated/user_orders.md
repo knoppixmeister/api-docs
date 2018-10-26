@@ -45,7 +45,7 @@ print(response.text)
 
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
-| symbol | query | Trading pair symbol (optional, if null, return orders of all symbols) |
+| symbol | query | Trading pair symbol |
 | status | query | Integer enum, please check the table below |
 | offset | query | Current page, which starts from 0 |
 | limit | query | Maximum size of the results in one page, less than 100 |
