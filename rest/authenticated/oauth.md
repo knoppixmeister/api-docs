@@ -12,7 +12,7 @@ Here is a step-by-step example of how to generate _**client_secret**_ from the L
 | :--- | :--- |
 | API Key | 6591f7c2491db0a23a1d8ad6911c825e |
 | API Secret | 8c08d9d5c3d15b105dbddaf96e427ac6 |
-| memo | mymemo (memo is the alias that user gave when this API was created) |
+| memo | mymemo (memo is the name that user gave when the API was created, you can check the name by logging into bitmart.com and check API List under Account) |
 
 ```sh
 [linux]$ echo -n "6591f7c2491db0a23a1d8ad6911c825e:8c08d9d5c3d15b105dbddaf96e427ac6:mymemo" | openssl dgst -sha256 -hmac "8c08d9d5c3d15b105dbddaf96e427ac6"
