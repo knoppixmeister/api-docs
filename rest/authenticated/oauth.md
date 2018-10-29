@@ -28,13 +28,18 @@ Here is a step-by-step example of how to generate _**client_secret**_ from the L
 | client_secret | 18b9beb027d9ee75202655f37344ea5829c5c0d66a0781bf642bb3e944cf5019 (HMAC SHA256 signed payload) |
 
 ```py
-import time
 import requests
 import json
+import hmac
+import hashlib
 
-def get_access_token(apiKey, client_secret):
+def create_sha256_signature(key, message): 
+    return hmac.new(key, message, hashlib.sha256)
+
+def get_access_token(api_key, api_secret, memo):
     url = "https://openapi.bitmart.com/v2/authentication"
-    data = {"grant_type": "client_credentials","client_id": "6591f7c2491db0a23a1d8ad6911c825e", "client_secret": "18b9beb027d9ee75202655f37344ea5829c5c0d66a0781bf642bb3e944cf5019"}
+    message = api_key + ':' + api_secret + ':' + memo
+    data = {"grant_type": "client_credentials","client_id": key, "client_secret": create_sha256_signature(api_secret, message)}
     response = requests.post(url, data = data)
     print(response.content)
     accessToken = response.json()['access_token']
