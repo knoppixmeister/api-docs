@@ -46,7 +46,7 @@ def get_access_token(api_key, api_secret, memo):
     return accessToken
 
 if __name__ == '__main__':
-    access_token = get_access_token(api_key, client_secret)
+    access_token = get_access_token(api_key, client_secret, memo)
     print access_token
 
 ```
