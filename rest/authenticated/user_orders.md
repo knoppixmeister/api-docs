@@ -48,7 +48,7 @@ print(response.text)
 | symbol | query | Trading pair symbol |
 | status | query | Integer enum, please check the table below |
 | offset | query | Current page, which starts from 0 |
-| limit | query | Maximum size of the results in one page, less than 100 |
+| limit | query | Maximum size of the results in one page (default 500, maximum 1000) |
 
 #### Polling
 
@@ -59,7 +59,6 @@ However, for high-volume trading it is strongly recommended that you maintain yo
 #### Status Type
 | Status | Description |
 | :--- | :--- |
-| 0 | All orders |
 | 1 | Pending orders |
 | 2 | Partially successful orders |
 | 3 | Success orders |
